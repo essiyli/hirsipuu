@@ -22,7 +22,7 @@ let arvaustenMaara = 0
 const newGame = () => {
     arvaustenMaara=0
     span.innerHTML=arvaustenMaara
-    const random = Math.floor(Math.random() * 10) + 1
+    const random = Math.floor(Math.random() * 9) + 1
     randomizedWord = words[random]
     maskedWord = "*".repeat(randomizedWord.length)
     console.log(randomizedWord)
@@ -65,7 +65,7 @@ input.addEventListener('keypress',(e) => {
         const guess = input.value
         if (guess.toLowerCase() === randomizedWord.toLocaleLowerCase()){
             win()
-            input.value=''
+            
 
         } else if (guess.length === 1) {
             replaceFoundChars(guess)
