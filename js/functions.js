@@ -25,7 +25,6 @@ const newGame = () => {
     const random = Math.floor(Math.random() * 9) + 1
     randomizedWord = words[random]
     maskedWord = "*".repeat(randomizedWord.length)
-    console.log(randomizedWord)
     output.innerHTML = maskedWord
 }
 
